@@ -26,4 +26,4 @@
     4. `mkdir ~/.ssh`
     5. `touch ~/.ssh/authorized_keys`
     6. `ssh-keygen` (on windows)
-    7. `type $env:USERPROFILE\.ssh\id_rsa.pub | ssh {IP-ADDRESS-OR-FQDN} "cat >> .ssh/authorized_keys"` (on windows)
+    7. `cat $env:USERPROFILE\.ssh\id_rsa.pub | ssh {IP-ADDRESS-OR-FQDN} "cat >> .ssh/authorized_keys"` (on windows)
