@@ -6,14 +6,16 @@
 2. Testez et notez les différentes façons de revenir avec la commande cd dans votre répertoire personnel /home/mon
    A chaque étape, pensez à utiliser la commande pwd pour vérifier dans quel répertoire vous vous trouvez.
     ```bash
-     cd /home/mon
-     cd ~
-     cd $HOME
-     cd -
+    cd
+    cd /home/mon
+    cd ~
+    cd $HOME
+    cd -
     ```
 3. Testez la commande cd - et expliquez comment elle fonctionne.
     1. retourne à la location avant le dernier cd
 4. Où vous place la commande cd utilisée sans paramètre ?
+    1. dans home
 5. Créez dans votre répertoire personnel /home/mon un répertoire TP1 dans lequel vous devrez effectuer tous les exercices suivants.
     ```bash
     mkdir ~/TP1
@@ -29,14 +31,14 @@
         |--bin
         |--src
         |--include
-    |--lib
-        |--divers
+        |--lib
+    |--divers
         |--images
         |--web
     ```
 
     ```bash
-    mkdir -p ~/TP1/{courrier,progs/{bin,src,include},lib/{divers,images,web}}
+    mkdir -p ~/TP1/{courrier,progs/{bin,src,include,lib},divers/{images,web}}
     ```
 
 7. Quand vous avez créé l'arborescence complète, affichez-la à l'aide de la commande ls (option de récursivité)

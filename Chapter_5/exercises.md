@@ -2,15 +2,15 @@
 
 ```
 /home/[user]/TP1
-                  |--courrier
-                  |--progs
-                        |--bin
-                        |--src
-                        |--include
-                        |--lib
-                  |--divers
-                        |--images
-                        |--web
+                |--courrier
+                |--progs
+                    |--bin
+                    |--src
+                    |--include
+                    |--lib
+                |--divers
+                    |--images
+                    |--web
 ```
 
 1. A l'aide de la commande touch, créez les fichiers vides prog1.c, prog2.c, prog3.for et prog4.for dans le répertoire src.
