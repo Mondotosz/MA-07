@@ -104,7 +104,7 @@
         1. utiliser le flag -i
 14. Placez-vous dans divers et, en une seule commande, copiez-y le répertoire src et son contenu en le renommant src2.
     ```bash
-    cp ~/TP1/progs/src src2 -R
+    cp ~/TP1/progs/src src2 -Ri
     ```
     2. Quel problème rencontrez-vous et quelle alternative devez-vous utiliser ?
         1. pas eu de problème, il faut utiliser le flag -R pour copier le contenu du dossier
