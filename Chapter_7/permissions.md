@@ -124,6 +124,7 @@
         vim src/prog2.c
         rm src/prog2.c
         ```
+
 7.  A partir de ces résultats, retrouvez les règles générales sur l'accès aux répertoires.
     ```md
     r = list files in the directory
@@ -144,11 +145,29 @@
     ```
 11. Toujours connecté en utilisateur root, je désire :
     -   Attribuer la sous-arborescence du répertoire src à l'utilisateur nobody et au groupe users
-12. Affichez la valeur par défaut du umask pour l'utilisateur lambda.
-13. Passez en root et affichez la valeur de son umask.
-14. Quelle raison permet d'expliquer la différence entre ces 2 valeurs ?
-15. Quelle unique valeur donner à la commande umask pour obtenir les droits ci-dessous à la création de (plusieurs réponses possibles!):
+        ```bash
+        chown -R nobody:users src
+        ```
+    1.  Affichez la valeur par défaut du umask pour l'utilisateur lambda.
+        ```bash
+        su mon
+        umask
+        # out
+        022
+        ```
+12. Passez en root et affichez la valeur de son umask.
+    ```bash
+    su root
+    umask
+    # out
+    0022
     ```
-    nouveaux fichiers : rw- r-- ---
-    nouveaux répertoires : rwx r-x ---
+13. Quelle raison permet d'expliquer la différence entre ces 2 valeurs ?
+    -   le premier byte definis setuid,setgid et un sticky bit qui est defini pour root mais pas pour l'utilisateur lambda
+14. Quelle unique valeur donner à la commande umask pour obtenir les droits ci-dessous à la création de (plusieurs réponses possibles!):
+    ```bash
+    # nouveaux fichiers : rw- r-- ---
+    # nouveaux répertoires : rwx r-x ---
+    umask 027
+    # Only new directories are affected
     ```
