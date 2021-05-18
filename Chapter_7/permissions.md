@@ -2,7 +2,7 @@
 
 1.  Dans le répertoire src, créez les fichiers vides droits-octal et droits-symb dont les droits sont par défaut fixés à rw- r-- r--
     ```bash
-    touch {droits-octal,droits-symb}
+    touch droits-{octal,symb}
     ```
 2.  Avec la commande chmod, modifiez les droits de ces deux fichiers en parallèle en utilisant les valeurs en octal sur le fichier droits-octal et les lettres et symboles sur le fichier droits-symb de sorte qu'ils prennent successivement les valeurs ci-dessous :
     ```bash
