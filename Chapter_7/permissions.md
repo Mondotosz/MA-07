@@ -169,5 +169,6 @@
     # nouveaux fichiers : rw- r-- ---
     # nouveaux répertoires : rwx r-x ---
     umask 027
-    # Only new directories are affected
+    # Only new directories are affected fully
+    # Files have execution disabled by default
     ```
