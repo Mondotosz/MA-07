@@ -166,4 +166,6 @@
 15. A présent, faites en sorte d'afficher, en une seule commande et sans utiliser de variable intermédiaire, la liste des fichiers du répertoire /lib/modules/ma_version_du_noyau où ma_version_du_noyau est donnée par l'exécution de la commande uname.
     ```bash
     find /lib/modules/ | grep `uname -r`
+    # shorter
+    tree /lib/modules/`uname -r`
     ```
