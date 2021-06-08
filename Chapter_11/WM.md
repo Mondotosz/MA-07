@@ -148,12 +148,22 @@
     1.  `sudo apt install chkconfig` => unavailable or obsolete => use sysv-rc-conf
 21. A l'aide de la commande chkconfig, vérifiez à quels niveaux de démarrage (RunLevel) ssh peut être démarré.
 22. Installer le paquet sysv-rc-conf
+    1.  Packet deja installé lors d'un exercice precedent
 23. A l'aide de la commande sysv-rc-conf, vérifiez à quels niveaux de démarrage (RunLevel) cron peut être démarré.
+    1.  `sudo sysv-rc-conf` => entre 2 et 5
 24. Utilisez la commande runlevel pour vérifier le niveau d’exécution auquel vous travaillez.
+    1.  `/sbin/runlevel` => `N 5`
 25. Passez en mode de maintenance mono-utilisateur (Runlevel 1).
+    1.  `sudo /sbin/init 1`
+    2.  `runlevel` => `5 1`
 26. Dans la liste des processus de votre système, vérifiez le statut des serveurs ssh et cron.
+    1.  `systemctl status sshd` => `inactive (dead)D`
+    2.  `systemctl status cron` => `inactive (dead)`
 27. Installer le paquet gnome-core et gdm3 et supprimer xdm
+    1.  `sudo apt install gnome-core gdm3`
+    2.  `sudo apt --purge remove xdm` => désinstalle xdm et vide les fichier de configuration liées
 28. Installer XRDP ( serveur RDP) pour se connecter depuis un client RDP® sur un serveur Linux
+    1.  `sudo apt install xrdp`
 29. Editez le fichier /etc/xrdp/startwm.sh
     ```bash
     #!/bin/sh
