@@ -46,13 +46,13 @@
     ```
 8. À l'aide de la commande date, qui permet de régler l'heure manuellement :
     1. Fixez la date de votre machine au 1er aout 2011
-       1. `sudo date -s "2011-08-01"`
+        1. `sudo date -s "2011-08-01"`
     2. Fixez l'heure à 22h59.
-       1. `sudo date -s "22:59"`
+        1. `sudo date -s "22:59"`
     3. Contrôler l'exécution du script tp1_backup.sh à 23h00
-       1. `ls /tmp -lh | grep "_tp1"` => `-rw-r--r-- 1 mon  mon   858 Aug  1 23:00 _tp1.tar.gz`
+        1. `ls /tmp -lh | grep "_tp1"` => `-rw-r--r-- 1 mon mon 858 Aug 1 23:00 _tp1.tar.gz`
     4. Refixez ensuite les valeurs normales.
-       1. `sudo date`
+        1. `sudo apt install ntp` => `sudo reboot`
 9. Si vous souhaitez effectuer une action particulière dans la journée (par exemple dans 15 minutes ou à une heure précise), vous n'utiliserez pas cron (car il n'y a pas de répétition, c'est juste une exécution unique programmée), il faudra utiliser la commande at. Exemple, nous allons demander de créer un fichier à 14 h 17 :
     ```bash
     $ at 14:17
@@ -62,3 +62,10 @@
     job 5 at Mon Nov 10 14:17:00 2010
     ```
 10. Programmez l'exécution unique du script tp1_backup.sh dans 5 minutes (now +5 minutes)
+    ```bash
+    at now + 5 min
+    warning: commands will be executed using /bin/sh
+    at> /bin/bash /home/mon/scripts/tp1_backup.sh
+    at> <EOT>
+    job 2 at Tue Jun 15 11:39:00 2021
+    ```
